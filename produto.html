@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto | Floricultura Recife</title>
+    <meta name="description"
+        content="Detalhes e descrição do arranjo de flores selecionadas na Floricultura Recife. Atendemos com entregas 24 horas!">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"></noscript>
+
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    <link rel="preload" href="/styles.css?v=2.0.0" as="style">
+    <link rel="stylesheet" href="/styles.css?v=2.0.0">
+
+    <!--
+        Critical anti-flicker CSS: hides dynamic product elements before JS runs.
+        Without this, the browser paints the hardcoded placeholder values for
+        a brief moment before DOMContentLoaded fires and corrects them.
+    -->
+    <style>
+        #product-img,
+        #product-title,
+        #product-desc,
+        #buy-now-btn {
+            opacity: 0;
+            /* No transition here — added by JS after content is correct */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="https://wa.me/558188325204" class="logo" target="_blank" rel="noopener">
+                <img src="images/logo.webp" alt="Floricultura Recife Logo" class="logo-img" decoding="async" width="212" height="150" loading="eager">
+            </a>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links">
+                <a href="/#produtos">Produtos</a>
+                <a href="/#essencia">Nossa Essência</a>
+                <a href="/#depoimentos">Depoimentos</a>
+                <a href="/#contato" class="btn-outline">Fale Conosco</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Detail Section -->
+    <main class="product-detail-page">
+        <div class="container">
+            <!-- Back Button -->
+            <div class="back-link-wrapper animate-fade-in in-view">
+                <a href="/#produtos" class="back-link">
+                    <span class="arrow">←</span> Voltar para a página inicial
+                </a>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="product-detail-grid">
+                <!-- Product Left: Image -->
+                <div class="product-detail-image-wrapper animate-fade-in in-view">
+                    <div class="product-detail-image-frame">
+                        <img id="product-img" src="images/bouquet_anniversary.webp" alt="Arranjo de Flores" width="600" height="800" loading="eager"
+                            class="product-detail-img" decoding="async">
+                    </div>
+                </div>
+
+                <!-- Product Right: Info -->
+                <div class="product-detail-info animate-fade-up in-view">
+                    <span class="product-category">Coleção Premium &bull; Floricultura Recife</span>
+                    <h1 id="product-title" class="product-detail-title">Buquê Aniversário</h1>
+                    <div class="product-divider"></div>
+                    <p id="product-desc" class="product-detail-description">
+                        O Buquê Aniversário é um presente encantador para celebrar o dia especial de alguém querido.
+                        Este buquê apresenta rosas vermelhas, densamente arranjadas e envoltas em um tecido de malha de
+                        cor clara, possivelmente branco ou creme. As rosas exibem pétalas frescas e vibrantes, com um
+                        gradiente de vermelho intenso e folhas verdes entre as flores. A elegante apresentação inclui
+                        uma fita rosada que arremata este belo arranjo com sofisticação.
+                    </p>
+
+                    <div class="product-actions">
+                        <a id="buy-now-btn"
+                            href="https://wa.me/5581988325204?text=Olá! Gostaria de comprar o Buquê Aniversário."
+                            target="_blank" rel="noopener" class="btn-primary product-buy-btn">
+                            Compre Aqui
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Map Section -->
+    <section id="visita" class="section map-section">
+        <div class="container map-container animate-fade-up">
+            <div class="map-info">
+                <p class="section-subtitle">Nossa Boutique</p>
+                <h2 class="section-title">Venha nos Visitar</h2>
+                <p class="map-desc">Experimente a beleza das nossas composições florais de perto. Criamos um espaço
+                    acolhedor no coração de Boa Viagem para você escolher seus arranjos com tranquilidade.</p>
+
+                <div class="map-details">
+                    <div class="detail-item">
+                        <span class="detail-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                width="20" height="20">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </span>
+                        <div>
+                            <strong>Endereço</strong>
+                            <p>R. Agenor Lopes, 212 - Boa Viagem, Recife - PE, 51021-110</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <span class="detail-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                                width="20" height="20">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                        </span>
+                        <div>
+                            <strong>Horário de Funcionamento</strong>
+                            <p>Segunda a Sábado: 8h às 19h | Domingo: 8h às 13h</p>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/5581988325204" target="_blank" rel="noopener" class="detail-item" style="text-decoration: none; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateX(4px)'" onmouseout="this.style.transform='translateX(0)'">
+                        <span class="detail-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                        </span>
+                        <div>
+                            <strong>WhatsApp / Contato</strong>
+                            <p style="color: inherit;">(81) 98832-5204 <span style="font-size: 0.8em; margin-left: 2px;">↗</span></p>
+                        </div>
+                    </a>
+                </div>
+
+                <a href="https://maps.google.com/?q=Floricultura+Recife+R.+Agenor+Lopes+212+Recife" target="_blank"
+                    rel="noopener" class="btn btn-primary map-btn">
+                    Como Chegar <span>↗</span>
+                </a>
+            </div>
+
+            <div class="map-frame-wrapper">
+                <div class="map-frame">
+                    <iframe
+                        src="https://maps.google.com/maps?q=Floricultura%20Recife%20R.%20Agenor%20Lopes%20212%20Recife&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa de localização da Floricultura Recife em Boa Viagem">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>Floricultura Recife</h3>
+                    <p>Entregamos mais do que flores, levamos carinho e alegria em cada buquê, garantindo sua plena
+                        satisfação.</p>
+                </div>
+
+                <div class="footer-links-group" id="contato">
+                    <span class="footer-links-title">Contato & Redes</span>
+                    <div class="footer-social-pills">
+                        <a href="https://wa.me/5581988325204" target="_blank" rel="noopener"
+                            class="footer-contact-pill highlight" aria-label="WhatsApp">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                            <span>(81) 98832-5204</span>
+                        </a>
+                        <a href="https://www.instagram.com/floriculturarecife" target="_blank" rel="noopener"
+                            class="footer-contact-pill" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://www.facebook.com/floriculturalirio/" target="_blank" rel="noopener"
+                            class="footer-contact-pill" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                            </svg>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Floricultura Recife. Todos os direitos reservados.</p>
+                <p class="developer-credit">Desenvolvido por <a href="https://www.linkedin.com/in/gfelix-developer"
+                        target="_blank" rel="noopener">Felix Dev</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dynamic Product Loader Script -->
+    <script>
+        const products = {
+            "buque-rosas-eternos-namorados": {
+                title: "Buquê Rosas Eternos Namorados",
+                image: "images/BUQUE GIGANTE.webp",
+                catalogUrl: "https://wa.me/p/26946331185024414/558188325204",
+                description: "O Buquê Rosas Eternos Namorados é um presente monumental que transmite amor em cada detalhe! Com impressionantes 1,50 metro de altura, este arranjo exclusivo é composto por flores frescas e selecionadas, incluindo maravilhosas rosas vermelhas e lírios deslumbrantes. Acompanha um adorável urso de pelúcia gigante e um balão metalizado em formato de coração com a mensagem \"Te Amo\". Feito com carinho e dedicação, é a escolha perfeita para todas as ocasiões em que você deseja surpreender de forma inesquecível e grandiosa."
+            },
+            "box-glamour-rosas": {
+                title: "Box Glamour Rosas Vermelhas",
+                image: "images/box_glamour_rosas.webp",
+                catalogUrl: "https://wa.me/p/6778090658925240/558188325204",
+                description: "Surpreenda com um arranjo que une o clássico das rosas vermelhas ao design contemporâneo. Esta peça exclusiva apresenta rosas premium cuidadosamente selecionadas, acomodadas em uma elegante caixa de linho estruturada. O destaque fica para o detalhe da corrente dourada e a alça longa e delicada, que transforma o arranjo em um acessório de luxo. Perfeito para presentear com modernidade e paixão."
+            },
+            "buque-encanto-lirios": {
+                title: "Buquê Encanto de lírios",
+                image: "images/buque_encanto_lirios.webp",
+                catalogUrl: "https://wa.me/p/27259950106972546/558188325204",
+                description: "Uma composição majestosa e perfumada de lírios premium selecionados, arranjada artisticamente para encantar e transmitir os sentimentos mais nobres. O Buquê Encanto de Lírios une elegância e delicadeza em uma embalagem luxuosa e minimalista, tornando-se o presente ideal para celebrar conquistas, expressar admiração e iluminar o dia de alguém especial com sofisticação."
+            },
+            "buque-rosas-brancas": {
+                title: "Buquê de Rosas Brancas",
+                image: "images/buque_rosas_brancas.webp",
+                catalogUrl: "https://wa.me/p/9434132433337498/558188325204",
+                description: "A expressão máxima da pureza, paz e amor sincero. Este buquê clássico reúne rosas brancas selecionadas de qualidade premium, dispostas com maestria em uma embalagem clean e sofisticada que realça o frescor natural das flores. Perfeito para casamentos, celebrações solenes ou para presentear com elegância, harmonia e admiração genuína."
+            },
+            "buque-dlirios": {
+                title: "Buquê D'lirios",
+                image: "images/buque_dlirios.webp",
+                catalogUrl: "https://wa.me/p/26731351799831708/558188325204",
+                description: "Uma elegante e sofisticada combinação de lírios e rosas frescas, montada para transmitir encanto e admiração. Com flores cuidadosamente selecionadas para manter o frescor e a durabilidade, este buquê é a escolha perfeita para encantar em momentos inesquecíveis e celebrar com muita elegância."
+            },
+            "buque-amor-felicidade": {
+                title: "Buquê Amor e Felicidade",
+                image: "images/buque_amor_felicidade.webp",
+                catalogUrl: "https://wa.me/p/26904336315847929/558188325204",
+                description: "Uma composição radiante que une a energia vibrante dos girassóis com o romance clássico das rosas vermelhas. O Buquê Amor e Felicidade transmite calor, paixão e alegria em cada detalhe, sendo o presente ideal para iluminar o dia de quem você ama e marcar momentos especiais com uma mensagem de carinho genuíno."
+            },
+            "cesta-cafe-buque-rosas": {
+                title: "Cesta Café da Manhã com Buquê de Rosas Vermelhas",
+                image: "images/cesta_cafe_buque_rosas.webp",
+                catalogUrl: "https://wa.me/p/6879089138781717/558188325204",
+                description: "Uma combinação perfeita de carinho, romantismo e delicadeza. A cesta reúne itens especiais para um café da manhã encantador, acompanhada de um sofisticado buquê de rosas vermelhas que simboliza amor e paixão. Ideal para surpreender em aniversários, datas especiais ou transformar qualquer manhã em um momento inesquecível e cheio de afeto."
+            },
+            "conquista-romantico": {
+                title: "Conquista Romântico",
+                image: "images/conquista_romantico.webp",
+                catalogUrl: "https://wa.me/p/8999687273460186/558188325204",
+                description: "Um presente marcante e apaixonante, composto por um elegante buquê de rosas vermelhas envolvido em uma embalagem sofisticada, acompanhado de um balão em formato de coração que torna a surpresa ainda mais especial. Ideal para declarar amor, celebrar momentos inesquecíveis e transformar qualquer ocasião em uma lembrança única e cheia de romantismo."
+            },
+            "buque-mix-flores": {
+                title: "Buquê mix de flores",
+                image: "images/buque_mix_flores.jpg",
+                catalogUrl: "https://wa.me/p/6677946252296516/558188325204",
+                description: "Cada flor e cada cor carregam significados especiais, transmitindo sentimentos como amor, carinho, alegria, gratidão e admiração. Um presente completo, elegante e cheio de boas energias, perfeito para tornar qualquer momento ainda mais especial."
+            },
+            "buque-aniversario": {
+                title: "Buquê Aniversário",
+                image: "images/bouquet_anniversary.webp",
+                catalogUrl: "https://wa.me/p/10035827223172848/558188325204",
+                description: "O Buquê Aniversário é um presente encantador para celebrar o dia especial de alguém querido. Este buquê apresenta rosas vermelhas, densamente arranjadas e envoltas em um tecido de malha de cor clara, possivelmente branco ou creme. As rosas exibem pétalas frescas e vibrantes, com um gradiente de vermelho intenso e folhas verdes entre as flores. A elegante apresentação inclui uma fita rosada que arremata este belo arranjo com sofisticação."
+            },
+            "buque-mix-felicidade": {
+                title: "Buquê Mix de Felicidade",
+                image: "images/bouquet_happiness.webp",
+                catalogUrl: "https://wa.me/p/6005308332890141/558188325204",
+                description: "O Buquê Mix de Felicidade é uma combinação encantadora de flores que transmite elegância e delicadeza. Cada pétala foi selecionada para criar um arranjo harmonioso que expressa sentimentos puros de carinho e transmite alegria instantânea."
+            },
+            "buque-lirios-rosas": {
+                title: "Buquê Lírios com Rosas",
+                image: "images/bouquet_lilies_roses.webp",
+                catalogUrl: "https://wa.me/p/7973633442695787/558188325204",
+                description: "O Buquê de Lírios com Rosas é uma combinação encantadora de flores que transmite elegância e delicadeza. Este buquê apresenta lírios brancos majestosos, que simbolizam pureza e renovação, complementados por rosas brancas ou creme representando amor puro e inocência. Toques de folhagens verdes adicionam textura e realçam a beleza única das flores. Este buquê é perfeito para presentear em aniversários, celebrações ou como um gesto carinhoso."
+            },
+            "box-sol-da-minha-vida": {
+                title: "Box Sol da Minha Vida",
+                image: "images/birthday_basket.webp",
+                catalogUrl: "https://wa.me/p/26218650267730367/558188325204",
+                description: "Um arranjo encantador com girassóis vibrantes que transmitem alegria, luz e carinho em cada detalhe. A Box Sol da Minha Vida é perfeita para presentear alguém especial com energia positiva, elegância e um toque inesquecível de felicidade."
+            },
+            "kit-rosas-e-chocolate": {
+                title: "Kit Rosas e Chocolate",
+                image: "images/luxury_basket_joy.webp",
+                catalogUrl: "https://wa.me/p/23999065656370949/558188325204",
+                description: "O Kit Rosas e Chocolate é um presente romântico e sofisticado, ideal para expressar sentimentos especiais. Este kit combina rosas delicadas, símbolos do amor e paixão, com chocolates deliciosos que acrescentam um toque de indulgência e prazer à experiência. O arranjo é cuidadosamente montado para proporcionar uma apresentação elegante, tornando-o perfeito para ocasiões como aniversários, Dia dos Namorados ou momentos que merecem ser celebrados com carinho e requinte."
+            },
+            "orquideas": {
+                title: "Orquídeas",
+                image: "images/orquideas.webp",
+                catalogUrl: "https://wa.me/p/8735303863223983/558188325204",
+                description: "A Orquídea é uma planta elegante e sofisticada, conhecida por sua beleza delicada e fragrância suave. Este arranjo apresenta orquídeas vibrantes, com pétalas sedosas e cores harmoniosas, dispostas em um vaso que realça sua beleza natural. Perfeita para presentear em ocasiões especiais, a Orquídea transmite elegância, requinte e apreço, tornando-se uma escolha memorável para expressar sentimentos especiais."
+            },
+            "kit-romance": {
+                title: "Kit Romance",
+                image: "images/kit_romance.webp",
+                catalogUrl: "https://wa.me/p/24586503801002988/558188325204",
+                description: "O Kit Romance é um presente romântico e sofisticado, ideal para expressar sentimentos especiais. Este kit combina rosas delicadas, símbolos do amor e paixão, com chocolates deliciosos que acrescentam um toque de indulgência e prazer à experiência. O arranjo é cuidadosamente montado para proporcionar uma apresentação elegante, tornando-o perfeito para ocasiões como aniversários, Dia dos Namorados ou momentos que merecem ser celebrados com carinho e requinte."
+            },
+            "buque-romance": {
+                title: "Buquê Romance",
+                image: "images/buque_romance_novo.webp",
+                catalogUrl: "https://wa.me/p/24081842044828036/558188325204",
+                description: "Especial com 20 rosas Vermelhas Aveludadas. Um clássico apaixonante composto por deslumbrantes rosas vermelhas, símbolo eterno do amor e da intensidade dos sentimentos. Com apresentação elegante e sofisticada, o Buquê Romance é perfeito para declarar emoções, surpreender alguém especial e tornar qualquer momento ainda mais inesquecível."
+            },
+            "mix-especial": {
+                title: "Mix Especial",
+                image: "images/mix_especial.webp",
+                catalogUrl: "https://wa.me/p/7234993009858540/558188325204",
+                description: "Uma composição vibrante que une flores coloridas e lírios elegantes em um arranjo cheio de charme e personalidade. O Mix Especial transmite alegria, sofisticação e leveza, sendo a escolha perfeita para presentear em ocasiões especiais ou iluminar qualquer ambiente com beleza natural."
+            },
+            "kit-especial-te-amo": {
+                title: "Kit Especial Te Amo",
+                image: "images/kit_especial_te_amo.webp",
+                catalogUrl: "https://wa.me/p/31396099143370884/558188325204",
+                description: "Um presente apaixonante e de puro luxo, perfeito para expressar o amor em sua forma mais sublime. O <strong>Kit Especial Te Amo</strong> foi cuidadosamente desenhado para tocar o coração de quem você ama, combinando sofisticação, doçura e afeto em uma composição inesquecível.<br><br><strong>Este kit exclusivo inclui:</strong><ul style='list-style: none; padding-left: 0; margin-top: 0.75rem;'><li style='margin-bottom: 0.5rem; display: flex; gap: 0.5rem; align-items: flex-start;'><span style='color: var(--clr-primary); font-weight: bold;'>&bull;</span><span><strong>Buquê Rosas Luxo:</strong> Rosas vermelhas de qualidade premium selecionadas com primor.</span></li><li style='margin-bottom: 0.5rem; display: flex; gap: 0.5rem; align-items: flex-start;'><span style='color: var(--clr-primary); font-weight: bold;'>&bull;</span><span><strong>Ferrero Rocher:</strong> Caixa de bombons finos de avelã para adoçar a experiência.</span></li><li style='margin-bottom: 0.5rem; display: flex; gap: 0.5rem; align-items: flex-start;'><span style='color: var(--clr-primary); font-weight: bold;'>&bull;</span><span><strong>Coração \"Te Amo\":</strong> Um carinhoso coração de pelúcia para marcar este momento especial.</span></li></ul>"
+            },
+            "mimo-girassóis": {
+                title: "Mimo Girassóis",
+                image: "images/mimo_girassois.webp",
+                catalogUrl: "https://wa.me/p/7709494722500878/558188325204",
+                description: "Delicado e cheio de luz, o Mimo Girassóis encanta com a beleza vibrante dos girassóis em uma composição leve e acolhedora. Um presente perfeito para transmitir alegria, carinho e boas energias em qualquer ocasião especial."
+            },
+            "cesta-romantica-com-chocolate": {
+                title: "Cesta Romântica com chocolate",
+                image: "images/cesta_romantica_com_chocolate.webp",
+                catalogUrl: "https://wa.me/p/8611511572297751/558188325204",
+                description: "A Cesta Romântica com Chocolate foi preparada para transformar momentos especiais inesquecíveis. Com uma combinação delicada de itens selecionados, flores encantadoras e chocolates irresistíveis, ela é perfeita para surpreender quem você ama com carinho, elegância e muito romantismo. Ideal para aniversários, datas especiais ou simplesmente para demonstrar amor de uma forma única e marcante."
+            },
+            "cesta-de-girassóis-com-rosas": {
+                title: "Cesta de Girassóis com rosas",
+                image: "images/cesta_de_girassois_com_rosas.webp",
+                catalogUrl: "https://wa.me/p/7037970146251526/558188325204",
+                description: "A Cesta de Girassóis com Rosas combina a alegria vibrante dos girassóis com a delicadeza e o romantismo das rosas, criando um presente encantador e cheio de significado. Montada com muito carinho, essa cesta é perfeita para surpreender em aniversários, comemorações especiais ou para demonstrar afeto de forma elegante e inesquecível. Um presente que transmite luz, amor e felicidade em cada detalhe."
+            },
+            "cesta-mix-mimo-especial": {
+                title: "Cesta Mix Mimo Especial",
+                image: "images/cesta_mix_mimo_especial.webp",
+                catalogUrl: "https://wa.me/p/26538264679122360/558188325204",
+                description: "A Cesta Mix Mimo Especial é uma combinação encantadora de flores selecionadas, cores delicadas e detalhes apaixonantes que tornam qualquer ocasião ainda mais especial. Com uma montagem elegante e cheia de carinho, ela transmite amor, admiração e afeto em cada detalhe. Perfeita para surpreender alguém querido com um presente sofisticado, marcante e inesquecível."
+            },
+            "buque-conquista": {
+                title: "Buquê Conquista",
+                image: "images/buque_conquista.webp",
+                catalogUrl: "https://wa.me/p/25713797071600221/558188325204",
+                description: "O Buquê Conquista é a escolha perfeita para surpreender com elegância, romantismo e intensidade. Com lindas rosas vermelhas cuidadosamente selecionadas, ele representa amor, paixão e admiração em cada detalhe. Um presente marcante e sofisticado, ideal para transformar qualquer momento em uma ocasião inesquecível."
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const productId = params.get('id');
+            const product = products[productId] || products['buque-aniversario'];
+
+            const imgEl    = document.getElementById('product-img');
+            const titleEl  = document.getElementById('product-title');
+            const descEl   = document.getElementById('product-desc');
+            const buyBtn   = document.getElementById('buy-now-btn');
+
+            // --- Atomically update all content BEFORE revealing it ---
+            // Clear the src first so the browser doesn't paint the old image
+            // even for a single frame while the new one loads.
+            imgEl.src = '';
+
+            document.title = `${product.title} | Floricultura Recife`;
+            titleEl.textContent  = product.title;
+            descEl.innerHTML    = product.description;
+
+            const messageText = `Ol\u00E1, Floricultura Recife! \u{1F338}\n\nGostaria de encomendar o produto *${product.title}*.\n\nSegue o link do c\u00E1t\u00E1logo para refer\u00EAncia:\n${product.catalogUrl}`;
+            const message = encodeURIComponent(messageText);
+            buyBtn.href = `https://wa.me/5581988325204?text=${message}`;
+
+            // --- Load the correct image, then reveal everything together ---
+            // This ensures image + text are shown simultaneously with no flicker.
+            const tempImg = new Image();
+            tempImg.onload = function () {
+                imgEl.src = product.image;
+                imgEl.alt = product.title;
+
+                // Use rAF so the browser has painted the correct src before opacity starts
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        const reveal = (el) => {
+                            el.style.transition = 'opacity 0.38s ease';
+                            el.style.opacity    = '1';
+                        };
+                        reveal(imgEl);
+                        reveal(titleEl);
+                        reveal(descEl);
+                        reveal(buyBtn);
+                    });
+                });
+            };
+            tempImg.onerror = function () {
+                // Fallback: show even if image fails to avoid blank page
+                imgEl.src = product.image;
+                imgEl.alt = product.title;
+                [imgEl, titleEl, descEl, buyBtn].forEach(el => {
+                    el.style.transition = 'opacity 0.38s ease';
+                    el.style.opacity    = '1';
+                });
+            };
+            tempImg.src = product.image;
+        });
+    </script>
+    <script src="/script.js"></script>
+</body>
+
+</html>
