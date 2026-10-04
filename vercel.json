@@ -1,6 +1,13 @@
 {
-  "cleanUrls": true,
   "trailingSlash": false,
+  "comment": "cleanUrls:true foi removido de proposito: ele redirecionava QUALQUER .html com 308, incluindo o arquivo de verificacao do Google Search Console, que precisa responder 200 direto. As regras abaixo dao o mesmo resultado so para as paginas do site.",
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/produto.html", "destination": "/produto", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/produto", "destination": "/produto.html" }
+  ],
   "headers": [
     {
       "source": "/sw.js",
