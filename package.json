@@ -32,14 +32,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gabrielfeliix/floricultura-site.git"
+    "url": "git+https://github.com/gabrielfeliix/floricultura-recife.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/gabrielfeliix/floricultura-site/issues"
+    "url": "https://github.com/gabrielfeliix/floricultura-recife/issues"
   },
-  "homepage": "https://github.com/gabrielfeliix/floricultura-site#readme"
+  "homepage": "https://github.com/gabrielfeliix/floricultura-recife#readme"
 }

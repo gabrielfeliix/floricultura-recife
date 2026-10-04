@@ -8,6 +8,18 @@
     <meta name="description"
         content="Detalhes e descrição do arranjo de flores selecionadas na Floricultura Recife. Atendemos com entregas 24 horas!">
 
+    <!-- canonical e Open Graph sao ajustados por produto em tempo de execucao -->
+    <link rel="canonical" id="canonical-link" href="https://www.floriculturarecife.shop/produto">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta property="og:type" content="product">
+    <meta property="og:site_name" content="Floricultura Recife">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" id="og-url" content="https://www.floriculturarecife.shop/produto">
+    <meta property="og:title" id="og-title" content="Floricultura Recife">
+    <meta property="og:description" id="og-desc" content="">
+    <meta property="og:image" id="og-image" content="https://www.floriculturarecife.shop/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -394,6 +406,47 @@
             document.title = `${product.title} | Floricultura Recife`;
             titleEl.textContent  = product.title;
             descEl.innerHTML    = product.description;
+
+            // --- SEO: canonical, Open Graph e dados estruturados do produto ---
+            const SITE = 'https://www.floriculturarecife.shop';
+            const idCanonico = products[productId] ? productId : 'buque-aniversario';
+            const urlCanonica = `${SITE}/produto?id=${encodeURIComponent(idCanonico)}`;
+            const urlImagem = `${SITE}/${product.image.split('/').map(encodeURIComponent).join('/')}`;
+            const textoLimpo = product.description.replace(/<[^>]*>/g, '').trim();
+
+            const setAttr = (id, attr, valor) => {
+                const el = document.getElementById(id);
+                if (el) el.setAttribute(attr, valor);
+            };
+            setAttr('canonical-link', 'href', urlCanonica);
+            setAttr('og-url', 'content', urlCanonica);
+            setAttr('og-title', 'content', `${product.title} | Floricultura Recife`);
+            setAttr('og-desc', 'content', textoLimpo.slice(0, 200));
+            setAttr('og-image', 'content', urlImagem);
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc) metaDesc.setAttribute('content', textoLimpo.slice(0, 160));
+
+            const ld = document.createElement('script');
+            ld.type = 'application/ld+json';
+            ld.textContent = JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'Product',
+                name: product.title,
+                description: textoLimpo,
+                image: urlImagem,
+                url: urlCanonica,
+                sku: idCanonico,
+                category: 'Flores e arranjos florais',
+                brand: { '@type': 'Brand', name: 'Floricultura Recife' },
+                offers: {
+                    '@type': 'Offer',
+                    url: urlCanonica,
+                    priceCurrency: 'BRL',
+                    availability: 'https://schema.org/InStock',
+                    seller: { '@id': `${SITE}/#loja` }
+                }
+            });
+            document.head.appendChild(ld);
 
             const messageText = `Ol\u00E1, Floricultura Recife! \u{1F338}\n\nGostaria de encomendar o produto *${product.title}*.\n\nSegue o link do c\u00E1t\u00E1logo para refer\u00EAncia:\n${product.catalogUrl}`;
             const message = encodeURIComponent(messageText);
